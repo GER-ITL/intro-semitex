@@ -1,0 +1,25 @@
+@import '../Qualities/Qualities.module.scss';
+.scheme {
+	button {
+		display: block;
+		margin: 30px auto;
+	}
+}
+.item {
+	background: linear-gradient(
+		120deg,
+		rgb(76, 68, 228) 50%,
+
+		rgb(82, 6, 223) 50%
+	);
+	color: #e6e6fa;
+}
+.blockItems {
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 200px 200px;
+	gap: 20px;
+}

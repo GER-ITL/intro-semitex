@@ -1,0 +1,35 @@
+.label {
+	padding: 50px;
+	max-width: 990px;
+	margin: 0 auto;
+	text-align: center;
+	h1 {
+		padding-bottom: 15px;
+	}
+}
+.blockItems {
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 300px 300px;
+	gap: 30px;
+}
+.item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	box-shadow: 0 0 10px #d5d5e7;
+	border-radius: 10px;
+	padding: 20px;
+	img {
+		align-self: center;
+		width: 100px;
+	}
+	span {
+		font-size: 25px;
+		font-weight: bold;
+		color: #d8d8f788;
+	}
+}
