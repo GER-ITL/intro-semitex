@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink, Route, Routes } from 'react-router-dom'
+import data from '../../response'
 import s from './Answers.module.scss'
+
 const Answers = ({ children }) => {
 	return (
 		<div className={s.answers}>
@@ -24,36 +26,11 @@ const Answers = ({ children }) => {
 			</div>
 			<br />
 			<Routes>
-				<Route
-					path='/1'
-					element={
-						'				1  autem, officia voluptatibus dolorem? Omnis, illum deserunt adipisci perferendis laboriosam assumenda.'
-					}
-				/>
-				<Route
-					path='/2'
-					element={
-						'				2 Lutem, officia voluptatibus dolorem? Omnis, illum deserunt adipisci perferendis laboriosam assumenda.'
-					}
-				/>
-				<Route
-					path='/3'
-					element={
-						'				3 Corporis reiciendis voluptatum sapiente temporibus iste, blanditiis recusandae nam ducimus animi autem, officia voluptatibus dolorem? Omnis, illum deserunt adipisci perferendis laboriosam assumenda.'
-					}
-				/>
-				<Route
-					path='/4'
-					element={
-						'				4 Cimus animi autem, officia voluptatibus dolorem? Omnis, illum deserunt adipiscimus animi autem, officia voluptatibus dolorem? Omnis, illum deserunt adipisci perferendis laboriosam assumenda.'
-					}
-				/>
-				<Route
-					path='/5'
-					element={
-						'				5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis reiciendis voluptatum sapiente temporibus iste, blanditiis recusandae nam ducimus animi autem, officia voluptatibus dolorem? Omnis, illum deserunt adipisci perferendis laboriosam assumenda.'
-					}
-				/>
+				{data.map(answer => {
+					return (
+						<Route key={answer.id} path={answer.id} element={answer.answer} />
+					)
+				})}
 			</Routes>
 		</div>
 	)
